@@ -57,13 +57,5 @@ void set_jump(pid_t pid, long int from_addr, long int to_addr){
     jmp_cord[i+6] = ch[i];
   }
   
-  /*  
-  printf("jump_cord : \n");
-  for(i=0;i<14;i++){
-    printf("%02x ",jmp_cord[i] & 0x000000ff);
-  }
-  printf("\n\n");
-  */
-  
   set_data(pid, from_addr, jmp_cord, 14); 
 }
