@@ -29,15 +29,12 @@ int main(int argc, char** argv){
     patch_filename = argv[3];
     target_symbol = argv[4];
 
-
     target_elf_info = make_elf_info(target_filename);
     patch_elf_info = make_elf_info(patch_filename);
 
-    
     get_sym_addr(target_elf_info, target_symbol, &target_sym_addr);  
     patch_obj = make_patch_obj(target_elf_info, patch_filename, patch_elf_info, &patch_size);
 
-   
 
     if(ptrace(PTRACE_ATTACH, pid, NULL, NULL) < 0){
       perror("attach error\n");
@@ -50,15 +47,13 @@ int main(int argc, char** argv){
     if(ptrace(PTRACE_DETACH, pid, NULL, NULL) < 0){
       perror("detach error\n");
     }
-    
-    
+
 
     for(i = 0; i < patch_size; i++){
       printf("%02x ", patch_obj[i] & 0x000000ff);
       if((i+1)%7==0)printf("\n");
     }
     printf("\n\n%llx\n\n", mmap_addr);
-    
     
   return 0;  
 }
