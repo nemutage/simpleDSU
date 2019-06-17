@@ -14,9 +14,10 @@ how to update function 'hoge' in 'target' using 'patch'.
 $ make
 ```
 
-### Compile patch.c to patch.o 
+### Compile target.c and patch.c 
 
 ```shell
+$ gcc ./target/target.c -o ./target/target
 $ gcc -fPIC -c ./patch/patch.c -o ./patch/patch.o
 ```
 
