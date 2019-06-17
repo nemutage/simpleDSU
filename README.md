@@ -1,7 +1,6 @@
 # simpleDSU
 
 simple Dynamic Software Updating can update without exiting the program.
-This is based on [livepatch](http://ukai.jp/Software/livepatch/). 
 It is implemented to work on Ubuntu 16.04 (64bit) without using external libraries.
 
 
