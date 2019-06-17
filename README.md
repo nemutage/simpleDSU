@@ -1,39 +1,32 @@
-simpleDSU
-==========================
+# simpleDSU
 
 simple Dynamic Software Updating can update without exiting the program.
 This is based on [livepatch](http://ukai.jp/Software/livepatch/). 
 It is implemented to work on Ubuntu 16.04 (64bit) without using external libraries.
 
 
-Usage
-------------
-
+## Usage
 how to update function 'hoge' in 'target' using 'patch'.
 
-Build main
-------------
+### Build main
 
 ```shell
 $ make
 ```
 
-Compile patch.c to patch.o 
-------------
+### Compile patch.c to patch.o 
 
 ```shell
 $ gcc -fPIC -c ./patch/patch.c -o ./patch/patch.o
 ```
 
-Run target
-------------
+### Run target
 
 ```shell
 $ ./target/target
 ```
 
-Update target
-------------
+###Update target
 
 ```shell
 $ sudo ./main [target PID] ./target/target ./patch/patch.o hoge
