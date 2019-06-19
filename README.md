@@ -1,7 +1,7 @@
 # simpleDSU
 
 simple Dynamic Software Updating can update the program without exiting it.
-It is implemented to work on Ubuntu 16.04 (64bit) without using external libraries.
+This is implemented to work on Ubuntu 16.04 (64bit) without using external libraries.
 
 
 ## Usage
